@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 
 // styles
 import "./_header.scss";
-
-// utils
-import LOGO_URL from "../../utils/constants";
+import Logo from "../Common/Logo";
 
 /**
  * @desc main header
@@ -14,11 +12,7 @@ import LOGO_URL from "../../utils/constants";
 const Header = () => {
   return (
     <nav className="nav-bar">
-      <div className="logo__wrapper">
-        <a href="/">
-          <img className="logo" src={LOGO_URL} alt="app_logo" />
-        </a>
-      </div>
+      <Logo />
       <div className="menu-list-wrapper">
         <ul className="menu-list">
           <li className="menu__purchase menu__item">
