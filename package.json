@@ -6,6 +6,7 @@
   "author": "KaiserPhemi <kaiser.phemi@protonmail.ch>",
   "license": "MIT",
   "scripts": {
+    "build": "rm -rf dist & NODE_ENV=production webpack --mode production",
     "start": "NODE_ENV=production node app.js",
     "dev": "NODE_ENV=development webpack-dev-server src/index.js"
   },
