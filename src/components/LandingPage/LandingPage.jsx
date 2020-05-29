@@ -21,16 +21,22 @@ const LandingPage = () => {
           Join our community for the latest technical specifications, verified
           suppliers data, and tools to help manage this global health pandemic.
         </p>
-        <div>
-          <form>
-            <input />
-            <button />
-          </form>
-        </div>
-        <h6 class="disclaimer">
+        <form className="subscribe-form">
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="user__email form-attr"
+          />
+          <input
+            className="form__btn form-attr"
+            type="submit"
+            value="Sign Up"
+          />
+        </form>
+        <span className="landing__page-disclaimer">
           We care about protecting your data. Read our
-          <a href="#">Privacy Policy</a>
-        </h6>
+          <a href="#"> Privacy Policy</a>
+        </span>
       </div>
     </div>
   );

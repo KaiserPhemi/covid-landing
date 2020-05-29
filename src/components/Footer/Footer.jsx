@@ -50,7 +50,7 @@ const Footer = () => {
             <span>Facebook</span>
           </a>
           <a href="#">
-            <i class="fa fa-twitter" aria-hidden="true" />
+            <i className="fa fa-twitter" aria-hidden="true" />
             <span>Twitter</span>
           </a>
           <a href="#">

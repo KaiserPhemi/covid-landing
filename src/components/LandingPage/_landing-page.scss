@@ -23,5 +23,47 @@
       text-align: center;
       width: 60%;
     }
+
+    .subscribe-form {
+      margin: 1rem 0;
+
+      .form-attr {
+        height: 2rem;
+        padding: 8px 16px;
+        outline: none;
+      }
+
+      .user__email {
+        width: 18rem;
+        border: 2px solid #2f80ed;
+        border-radius: 4px 0 0 4px;
+        font-size: inherit;
+      }
+
+      .form__btn {
+        background-color: #2f80ed;
+        border-radius: 0 4px 4px 0;
+        border: none;
+        cursor: pointer;
+        margin-left: -2px;
+        height: 52px;
+        color: #fff;
+        font-size: inherit;
+        font-weight: 700;
+      }
+    }
+
+    .landing__page-disclaimer {
+      color: #6984a3;
+      margin-top: 16px;
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: #2f80ed;
+        }
+      }
+    }
   }
 }
