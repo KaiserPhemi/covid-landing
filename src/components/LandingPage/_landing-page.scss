@@ -97,12 +97,37 @@
         right: 80px;
       }
     }
+  }
 
-    .banner-right {
+  .supply__req-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2279f2;
+    color: #fff;
+    font-size: inherit;
+    margin: 0 auto;
+    padding: 16px 0;
+
+    .supply__req-title {
+      padding: 16px;
+    }
+
+    a {
+      color: inherit;
+      padding: 10px;
+      border: 2px solid #fff;
+      border-radius: 4px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #fff;
+        color: #2279f2;
+      }
     }
   }
 
-  .landing-page__join {
+  .landing-page__form {
     display: flex;
     flex-direction: column;
     align-items: center;
