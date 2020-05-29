@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="footer-links">
           <a href="#">About</a>
           <a href="#">Contact Us</a>
-          <a href="#">+1 (844) 966-1910</a>;
+          <a href="#">+1 (844) 966-1910</a>
         </div>
       </div>
       <div className="footer__social footer--column">

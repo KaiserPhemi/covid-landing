@@ -16,24 +16,21 @@ const LandingPage = () => {
       <div></div>
       <div></div>
       <div className="landing-page__join">
+        <span className="section_header">Get Involved</span>
+        <p className="section_sub-header">
+          Join our community for the latest technical specifications, verified
+          suppliers data, and tools to help manage this global health pandemic.
+        </p>
         <div>
-          <h2>Get Involved</h2>
-          <h3>
-            Join our community for the latest technical specifications, verified
-            suppliers data, and tools to help manage this global health
-            pandemic.
-          </h3>
-          <div>
-            <form>
-              <input />
-              <button />
-            </form>
-          </div>
-          <h6 class="disclaimer">
-            We care about protecting your data. Read our
-            <a href="#">Privacy Policy</a>
-          </h6>
+          <form>
+            <input />
+            <button />
+          </form>
         </div>
+        <h6 class="disclaimer">
+          We care about protecting your data. Read our
+          <a href="#">Privacy Policy</a>
+        </h6>
       </div>
     </div>
   );
