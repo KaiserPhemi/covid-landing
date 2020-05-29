@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 // styles
 import "./_header.scss";
+
+// components
 import Logo from "../Common/Logo";
 
 /**

@@ -2,7 +2,7 @@
 import React from "react";
 
 // utils
-import LOGO_URL from "../../utils/constants";
+import { LOGO_URL } from "../../utils/constants";
 
 // styles
 import "./_logo.scss";

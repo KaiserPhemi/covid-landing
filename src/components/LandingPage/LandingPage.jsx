@@ -4,13 +4,16 @@ import React from "react";
 // styles
 import "./_landing-page.scss";
 
+// components
+import LandingPageBanner from "./LandingPageBanner";
+
 /**
  * @desc app landing page
  */
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      <div></div>
+      <LandingPageBanner />
       <div></div>
       <div></div>
       <div></div>
