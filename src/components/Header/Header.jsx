@@ -1,8 +1,12 @@
 // react libraries
 import React from "react";
+import { Link } from "react-router-dom";
 
 // styles
-import "./__header.scss";
+import "./_header.scss";
+
+// utils
+import LOGO_URL from "../../utils/constants";
 
 /**
  * @desc main header
@@ -10,18 +14,28 @@ import "./__header.scss";
 const Header = () => {
   return (
     <nav className="nav-bar">
-      <div className="app-logo">logo</div>
+      <div className="logo__wrapper">
+        <a href="/">
+          <img className="logo" src={LOGO_URL} alt="app_logo" />
+        </a>
+      </div>
       <div className="menu-list-wrapper">
         <ul className="menu-list">
-          <li className="menu__purchase">Group Purchasing</li>
-          <li className="menu__about">About</li>
-          <li className="menu__contact">Contact Us</li>
+          <li className="menu__purchase menu__item">
+            <a href="#">Group Purchasing</a>
+          </li>
+          <li className="menu__about menu__item">
+            <a href="#">About</a>
+          </li>
+          <li className="menu__contact menu__item">
+            <a href="#">Contact Us</a>
+          </li>
         </ul>
       </div>
       <div className="btn-wrapper">
-        <button className="btn__login">Login</button>
-        <button className="btn__request">Request</button>
-        <button className="btn__supply">Supply</button>
+        <button className="btn__login btn__typeface">Log in</button>
+        <button className="btn__request btn__typeface">Request</button>
+        <button className="btn__supply btn__typeface">Supply</button>
       </div>
     </nav>
   );

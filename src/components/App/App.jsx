@@ -12,10 +12,12 @@ import "./app.scss";
  * @desc app entry
  */
 const App = () => {
-  return <div className="app-container">
-    <Header />
-    <Footer />
-  </div>;
+  return (
+    <div className="app-container">
+      <Header />
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
