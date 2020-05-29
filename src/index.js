@@ -1,4 +1,8 @@
+// react libraries
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom";
 
-ReactDom.render(<App />, document.querySelector("#root-app"));
+// components
+import App from "./App.jsx";
+
+ReactDOM.render(<App />, document.getElementById("root-app"));
