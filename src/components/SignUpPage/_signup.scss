@@ -75,6 +75,15 @@
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       grid-template-columns: repeat(2, 1fr);
+
+      .product-item {
+        padding: 10px;
+        border: 2px solid #ddd;
+
+        &:active {
+          border: 2px solid #2f80ed;
+        }
+      }
     }
   }
 }
