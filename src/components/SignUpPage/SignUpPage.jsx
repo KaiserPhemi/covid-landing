@@ -13,7 +13,7 @@ import ContactInfo from "./ContactInfo";
  * @desc
  */
 const SignUpPage = () => {
-  const [pageStep, changeStep] = useState(1);
+  const [pageStep, changeStep] = useState(2);
 
   /**
    * @desc takes us to the next page

@@ -6,14 +6,18 @@ import React from "react";
  */
 const ProductList = () => {
   return (
-    <div>
-      <div>
-        <h4>What products do you offer?</h4>
-        <p>Select all that applies</p>
+    <div className="product-list-page">
+      <div className="card-header">
+        <h4 className="card-title">What products do you offer?</h4>
+        <p className="card-text">Select all that applies</p>
       </div>
-      <div>
+      <div className="card-body">
         <label htmlFor="">
-          <input type="text" />
+          <input type="checkbox" />
+          <p>
+            <span></span>
+            <span></span>
+          </p>
         </label>
         <label htmlFor="">
           <input type="text" />
