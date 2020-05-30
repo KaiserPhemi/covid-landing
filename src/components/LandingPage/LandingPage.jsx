@@ -19,7 +19,6 @@ const LandingPage = () => {
       <LandingPageBanner />
       <SupplyRequest />
       <RequestFlow />
-
       <LandingPageForm />
     </div>
   );

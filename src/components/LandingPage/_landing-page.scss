@@ -1,6 +1,5 @@
 .landing-page {
   width: 100vw;
-  height: 100vw;
   margin: 10rem auto 0;
 
   .page__banner {
@@ -8,7 +7,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
 
     .banner-left {
       .column-header {
@@ -24,8 +23,7 @@
 
       .header-text {
         color: #6984a3;
-        font-size: 1.2rem;
-        // width: 50vw;
+        font-size: 1.5rem;
       }
 
       .btn__wrapper {
@@ -127,6 +125,53 @@
     }
   }
 
+  .request-flow {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+
+    .wrapper-header {
+      color: #2279f2;
+      font-size: 2rem;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .common-layout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10rem;
+      margin: 80px auto;
+      width: 70%;
+    }
+    .section-title {
+      color: #2f80ed;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin: 8px 0;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      font-size: 2rem;
+      font-weight: 700;
+      width: 60%;
+    }
+
+    .section_img {
+      img {
+        object-fit: contain;
+        width: 90%;
+      }
+    }
+
+    .section-subheading {
+      color: #6984a3;
+      font-size: 1.5rem;
+    }
+  }
+
   .landing-page__form {
     display: flex;
     flex-direction: column;
@@ -190,4 +235,11 @@
       }
     }
   }
+}
+
+.anon {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
 }
