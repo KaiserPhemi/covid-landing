@@ -31,7 +31,9 @@ const Header = () => {
       <div className="btn-wrapper">
         <button className="btn__login btn__typeface">Log in</button>
         <button className="btn__request btn__typeface">Request</button>
-        <button className="btn__supply btn__typeface">Supply</button>
+        <Link to="/register">
+          <button className="btn__supply btn__typeface">Supply</button>
+        </Link>
       </div>
     </nav>
   );
