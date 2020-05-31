@@ -161,7 +161,7 @@ const ContactInfo = () => {
 
               <label htmlFor="country">Country</label>
               <input
-                id="zip"
+                id="country"
                 className="user-input-field"
                 type="text"
                 placeholder="Country"

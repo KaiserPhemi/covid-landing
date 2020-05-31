@@ -19,12 +19,13 @@ const ProductList = () => {
    * @desc handles clicking events of items
    * @param {object} evt
    */
-  const handleClick = (evt, itemId) => {
-    const clickHandId = evt.currentTarget.id;
+  const handleClick = (evt, index) => {
+    const clickHandId = evt.target.id;
+    console.log(evt.target.classList);
     console.log("Id clicked", clickHandId);
-    console.log("Current Id", itemId);
+    console.log("Current Id", `item-${index + 1}`);
 
-    if (evt.currentTarget.id === itemId) {
+    if (evt.target.id === `item-${index + 1}`) {
       setActive(!isItemActive);
     }
   };
@@ -44,7 +45,6 @@ const ProductList = () => {
             key={index}
             index={index}
             checkActive={isItemActive}
-            itemId={`item-${index + 1}`}
             category={product.category}
             subCategory={product.subCategory}
             handleClick={handleClick}

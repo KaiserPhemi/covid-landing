@@ -11,13 +11,12 @@ const ProductListItem = ({
   subCategory,
   index,
   handleClick,
-  itemId,
   checkActive,
 }) => {
   return (
     <label
-      id={itemId}
-      onClick={(evt) => handleClick(evt, itemId)}
+      id={`item-${index + 1}`}
+      onClick={(evt) => handleClick(evt, index)}
       className={`product-item ${checkActive ? "selected-product-item" : ""}`}
     >
       <span className={`category ${checkActive ? "selected-category" : ""}`}>
@@ -35,7 +34,6 @@ ProductListItem.propTypes = {
   itemActive: PropTypes.string,
   subCategory: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
-  itemId: PropTypes.string.isRequired,
 };
 
 export default ProductListItem;
