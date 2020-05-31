@@ -60,7 +60,7 @@
     border: 2px solid #eaf2fd;
     border-radius: 3px;
     background-color: #fff;
-    width: 40%;
+    width: 50%;
 
     .card-header {
       padding: 0.75rem 1.25rem;
@@ -75,15 +75,43 @@
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      padding: 0.75rem 1.25rem;
 
       .product-item {
-        padding: 10px;
-        border: 2px solid #ddd;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 1rem;
+        border: 2px solid #eaf2fd;
+        cursor: pointer;
 
-        &:active {
-          border: 2px solid #2f80ed;
+        .category {
+          color: #304256;
+          font-weight: 700;
+          padding-right: 10px;
+        }
+
+        .sub-category {
+          color: #6984a3;
+          font-weight: 400;
+        }
+
+        .selected-category {
+          color: #2f80ed;
         }
       }
+
+      .selected-product-item {
+        border: 2px solid #2f80ed;
+        background-color: #f5f8fd;
+      }
     }
+  }
+
+  .nav-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 24px;
   }
 }

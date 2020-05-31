@@ -8,6 +8,7 @@ import "./_signup.scss";
 import SignUpPrompt from "./SignUpPrompt";
 import ProductList from "./ProductList";
 import ContactInfo from "./ContactInfo";
+import Button from "../Common/Button";
 
 /**
  * @desc
@@ -26,6 +27,7 @@ const SignUpPage = () => {
    * @desc returns to the previous page
    */
   const prevPage = () => {
+    console.log("prev page");
     changeStep(pageStep - 1);
   };
 
@@ -46,7 +48,20 @@ const SignUpPage = () => {
   /**
    * @desc returns the rendered DOM
    */
-  return <div className="signup-page">{showComponent()}</div>;
+  return (
+    <div className="signup-page">
+      {showComponent()}
+      {pageStep !== 1 && (
+        <div className="nav-btn">
+          <Button btnText="Back" onClick={() => prevPage()} />
+          <Button
+            btnText={pageStep === 3 ? `Submit` : `Continue`}
+            onClick={() => nextStep()}
+          />
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default SignUpPage;

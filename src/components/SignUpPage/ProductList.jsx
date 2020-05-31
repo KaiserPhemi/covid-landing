@@ -1,16 +1,37 @@
 // react libraries
-import React from "react";
+import React, { useState, useRef, forwardRef } from "react";
+import PropTypes from "prop-types";
+
+// utils
+import productList from "../../utils/productList";
+
+// components
+import ProductListItem from "./ProductListItem";
 
 /**
  * @desc renders list of products to chose from
  */
 const ProductList = () => {
-  const handleClick = (evt) => {
-    const Cat = evt.target.className;
+  // state
+  const [isItemActive, setActive] = useState(false);
 
-    let clickEd = {};
-    console.log(evt.target.className.value);
+  /**
+   * @desc handles clicking events of items
+   * @param {object} evt
+   */
+  const handleClick = (evt, itemId) => {
+    const clickHandId = evt.currentTarget.id;
+    console.log("Id clicked", clickHandId);
+    console.log("Current Id", itemId);
+
+    if (evt.currentTarget.id === itemId) {
+      setActive(!isItemActive);
+    }
   };
+
+  /**
+   * @desc
+   */
   return (
     <div className="product-list-page">
       <div className="card-header">
@@ -18,43 +39,18 @@ const ProductList = () => {
         <p className="card-text">Select all that applies</p>
       </div>
       <div className="card-body">
-        <label
-          className="product-item"
-          htmlFor="hand-sanitizer"
-          onClick={(evt) => handleClick(evt)}
-        >
-          <span className="category">Hand Sanitizer</span>
-          <span className="sub-category">Sanitizer</span>;
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-        <label htmlFor="">
-          <input type="text" />
-        </label>
+        {productList &&
+          productList.map((product, index) => (
+            <ProductListItem
+              key={index}
+              checkActive={isItemActive}
+              itemId={`item-${index + 1}`}
+              category={product.category}
+              subCategory={product.subCategory}
+              handleClick={handleClick}
+            />
+          ))}
       </div>
-      <div></div>
     </div>
   );
 };
