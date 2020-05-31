@@ -14,7 +14,7 @@ import Button from "../Common/Button";
  * @desc
  */
 const SignUpPage = () => {
-  const [pageStep, changeStep] = useState(3);
+  const [pageStep, changeStep] = useState(1);
 
   /**
    * @desc takes us to the next page
@@ -51,12 +51,12 @@ const SignUpPage = () => {
   return (
     <div className="signup-page">
       {showComponent()}
-      {pageStep !== 1 && (
+      {pageStep !== 1 && pageStep < 4 && (
         <div className="nav-btn">
-          <Button btnText="Back" onClick={() => prevPage()} />
+          <Button btnText="Back" onClick={prevPage} />
           <Button
             btnText={pageStep === 3 ? `Submit` : `Continue`}
-            onClick={() => nextStep()}
+            onClick={nextStep}
           />
         </div>
       )}

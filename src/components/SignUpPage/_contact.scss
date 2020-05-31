@@ -6,9 +6,27 @@
     background-color: #fff;
     box-shadow: 4px 4px 12px 0 #eaf2fd;
     border: 2px solid #eaf2fd;
+    border-radius: 4px;
     margin-bottom: 2rem;
   }
-  .contact-info-section {
+
+  .user-input-field {
+    width: 50%;
+    height: 2rem;
+    color: #495057;
+    font-size: inherit;
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin: 6px 0 16px;
+    outline: none;
+  }
+
+  .drop-down {
+    height: 3rem;
+  }
+
+  .def-info-section {
     .section-header {
       padding: 2rem;
       font-weight: 700;
@@ -18,18 +36,6 @@
 
     .body-header {
       font-size: 1rem;
-    }
-
-    .user-input-field {
-      width: 50%;
-      height: 2rem;
-      color: #495057;
-      font-size: inherit;
-      border: 2px solid #ced4da;
-      border-radius: 4px;
-      padding: 4px 10px;
-      margin: 6px 0 16px;
-      outline: none;
     }
 
     .contact-info-body {
@@ -43,6 +49,25 @@
 
     .org-link-card {
       padding-top: 0;
+    }
+  }
+
+  .org-details-section {
+  }
+
+  .eula-wrapper {
+    .eula-checkbox {
+      display: flex;
+      padding: 4px 0;
+
+      input {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      label {
+        cursor: pointer;
+      }
     }
   }
 }
