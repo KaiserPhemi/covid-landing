@@ -14,7 +14,7 @@ import Button from "../Common/Button";
  * @desc
  */
 const SignUpPage = () => {
-  const [pageStep, changeStep] = useState(2);
+  const [pageStep, changeStep] = useState(3);
 
   /**
    * @desc takes us to the next page

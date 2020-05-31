@@ -39,17 +39,17 @@ const ProductList = () => {
         <p className="card-text">Select all that applies</p>
       </div>
       <div className="card-body">
-        {productList &&
-          productList.map((product, index) => (
-            <ProductListItem
-              key={index}
-              checkActive={isItemActive}
-              itemId={`item-${index + 1}`}
-              category={product.category}
-              subCategory={product.subCategory}
-              handleClick={handleClick}
-            />
-          ))}
+        {productList.map((product, index) => (
+          <ProductListItem
+            key={index}
+            index={index}
+            checkActive={isItemActive}
+            itemId={`item-${index + 1}`}
+            category={product.category}
+            subCategory={product.subCategory}
+            handleClick={handleClick}
+          />
+        ))}
       </div>
     </div>
   );

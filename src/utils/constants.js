@@ -13,3 +13,7 @@ export const REQUEST_FLOW_IMG_1 = `https://uploads-ssl.webflow.com/5a7269a5582f5
 export const REQUEST_FLOW_IMG_2 = `https://uploads-ssl.webflow.com/5a7269a5582f52000102d51d/5ea47d5b808bdf5ef78c4308_supplier_simple.svg`;
 export const REQUEST_FLOW_IMG_3 = `https://uploads-ssl.webflow.com/5a7269a5582f52000102d51d/5e9d92f4c0385a5a0fa4c828_compare.svg`;
 export const REQUEST_FLOW_IMG_4 = `https://uploads-ssl.webflow.com/5a7269a5582f52000102d51d/5e9d92e6d328d8de2cdb3239_delivered.svg`;
+
+// terms content
+export const EULA = `Once you submit your request, we'll securely store your information in an account to make sure we can contact you when we find a match. 
+                    We’ll send you a temporary password that you can use to access your account and manage your requests.`;

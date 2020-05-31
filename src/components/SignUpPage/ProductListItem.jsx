@@ -1,5 +1,5 @@
 // react libraries
-import React, { forwardRef } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 /**
@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 const ProductListItem = ({
   category,
   subCategory,
+  index,
   handleClick,
   itemId,
   checkActive,

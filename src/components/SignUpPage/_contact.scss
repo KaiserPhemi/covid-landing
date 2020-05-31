@@ -1,0 +1,48 @@
+.contact-info-page {
+  width: 50%;
+  margin: 0 auto;
+
+  .default-card {
+    background-color: #fff;
+    box-shadow: 4px 4px 12px 0 #eaf2fd;
+    border: 2px solid #eaf2fd;
+    margin-bottom: 2rem;
+  }
+  .contact-info-section {
+    .section-header {
+      padding: 2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      border-bottom: 2px solid #eaf2fd;
+    }
+
+    .body-header {
+      font-size: 1rem;
+    }
+
+    .user-input-field {
+      width: 50%;
+      height: 2rem;
+      color: #495057;
+      font-size: inherit;
+      border: 2px solid #ced4da;
+      border-radius: 4px;
+      padding: 4px 10px;
+      margin: 6px 0 16px;
+      outline: none;
+    }
+
+    .contact-info-body {
+      padding: 2rem;
+
+      .body-details {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .org-link-card {
+      padding-top: 0;
+    }
+  }
+}
