@@ -7,21 +7,23 @@ import PropTypes from "prop-types";
  * @param {object} props
  */
 const ProductListItem = ({
+  activeCategoryClass,
+  activeTextClass,
   category,
   subCategory,
   index,
   handleClick,
   checkActive,
+  itemId,
 }) => {
   return (
     <label
-      id={`item-${index + 1}`}
-      onClick={(evt) => handleClick(evt, index)}
-      className={`product-item ${checkActive ? "selected-product-item" : ""}`}
+      id={itemId}
+      onClick={(evt) => handleClick(evt, itemId)}
+      className={`product-item ${activeCategoryClass}`}
     >
-      <span className={`category ${checkActive ? "selected-category" : ""}`}>
-        {category}
-      </span>
+      <input type="checkbox" />
+      <span className={`category ${activeTextClass}`}>{category}:</span>
       <span className="sub-category">{subCategory}</span>
     </label>
   );
@@ -32,6 +34,7 @@ ProductListItem.propTypes = {
   categoryActive: PropTypes.string,
   category: PropTypes.string.isRequired,
   itemActive: PropTypes.string,
+  itemId: PropTypes.string.isRequired,
   subCategory: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
 };

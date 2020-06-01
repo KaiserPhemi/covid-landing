@@ -1,5 +1,5 @@
 // react libraries
-import React, { useState, useRef, forwardRef } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 // utils
@@ -14,20 +14,24 @@ import ProductListItem from "./ProductListItem";
 const ProductList = () => {
   // state
   const [isItemActive, setActive] = useState(false);
+  const [activeCategory, setCategory] = useState("");
+  const [activeSubCategory, setSubCategory] = useState("");
+  const [clickedItemId, setItemId] = useState("");
 
   /**
    * @desc handles clicking events of items
    * @param {object} evt
    */
-  const handleClick = (evt, index) => {
-    const clickHandId = evt.target.id;
-    console.log(evt.target.classList);
-    console.log("Id clicked", clickHandId);
-    console.log("Current Id", `item-${index + 1}`);
-
-    if (evt.target.id === `item-${index + 1}`) {
+  const handleClick = (evt, item) => {
+    // still work in progress
+    if (evt.currentTarget.id === item) {
       setActive(!isItemActive);
     }
+    const productName = [...evt.currentTarget.innerText.split(":")];
+    const selectedProduct = {};
+    const productList = [];
+    setItemId(item);
+    const clickHandId = evt.currentTarget.id;
   };
 
   /**
@@ -44,10 +48,17 @@ const ProductList = () => {
           <ProductListItem
             key={index}
             index={index}
+            itemId={product.id}
             checkActive={isItemActive}
             category={product.category}
             subCategory={product.subCategory}
             handleClick={handleClick}
+            activeCategoryClass={(product.id === clickedItemId)
+              ? "selected-product-item"
+              : ""}
+            activeTextClass={(product.id === clickedItemId)
+              ? "selected-category"
+              : ""}
           />
         ))}
       </div>

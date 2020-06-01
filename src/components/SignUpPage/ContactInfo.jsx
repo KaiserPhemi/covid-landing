@@ -65,7 +65,6 @@ const ContactInfo = () => {
             <h4>Proof of association with organization</h4>
           </div>
           <div className="link">
-            {/* <label htmlFor=""></label> */}
             <input
               className="user-input-field"
               type="text"
@@ -92,12 +91,12 @@ const ContactInfo = () => {
                 name="org-type"
                 id="org-type"
               >
-                <option value="organization-type" disabled selected>
+                <option value="Organization Type" disabled>
                   Organization Type
                 </option>
-                <option value="">Supplier</option>
-                <option value="">Manufacturer</option>
-                <option value="">Individual</option>
+                <option value="Supplier">Supplier</option>
+                <option value="Manufacturer">Manufacturer</option>
+                <option value="Individual">Individual</option>
               </select>
 
               <label htmlFor="">Name</label>

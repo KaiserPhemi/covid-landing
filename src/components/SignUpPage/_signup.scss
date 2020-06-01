@@ -86,6 +86,11 @@
         border: 2px solid #eaf2fd;
         cursor: pointer;
 
+        input[type="checkbox"] {
+          position: absolute;
+          clip: rect(0, 0, 0, 0);
+        }
+
         .category {
           color: #304256;
           font-weight: 700;
